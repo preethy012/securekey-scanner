@@ -1,0 +1,75 @@
+# ============================================================
+# SecureKey Scanner — .gitignore
+# Place this file at: api-key-scanner/.gitignore (ROOT level)
+# ============================================================
+
+# ── CRITICAL: SECRET FILES — NEVER COMMIT ────────────────────
+.env
+.env.*
+*.env
+backend/.env
+backend/.env.*
+backend/instance/
+
+# ── DATABASE — contains real user passwords ──────────────────
+*.db
+*.sqlite
+*.sqlite3
+backend/users.db
+
+# ── TEST FILES — may contain credentials ─────────────────────
+backend/testmail.py
+backend/validator.py
+test_*.py
+*_test.py
+
+# ── PYTHON VIRTUAL ENVIRONMENT ───────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+backend/.venv/
+backend/venv/
+Include/
+Lib/
+Scripts/
+pyvenv.cfg
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# ── NODE MODULES (reinstalled with npm install) ───────────────
+node_modules/
+frontend/scanner-ui/node_modules/
+
+# ── REACT BUILD OUTPUT ────────────────────────────────────────
+frontend/scanner-ui/build/
+build/
+
+# ── LOGS ─────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── OS FILES ─────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE ──────────────────────────────────────────────────────
+.vscode/settings.json
+.idea/
+*.swp
+
+# ── PRIVATE KEYS / CERTS ─────────────────────────────────────
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
