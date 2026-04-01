@@ -6,8 +6,6 @@ import os, tempfile, shutil
 import sqlite3
 import hashlib, secrets
 import ipaddress
-# python-magic is optional — works on Linux/Mac automatically
-# Windows: pip install python-magic-bin (not python-magic)
 try:
     import magic as _magic_lib
     MAGIC_AVAILABLE = True
